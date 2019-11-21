@@ -60,6 +60,7 @@ header::after{
 .save{
   width: 15%;
   text-align: center;
+  padding-top: 1.5rem;
   border-radius: 4px;
   background: #36a6cf;
 }
