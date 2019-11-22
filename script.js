@@ -113,7 +113,6 @@ const updateContent = () => {
 
 const checkTimes = () => {
   let currentTime = moment().hour();
-  currentTime = 11;
   if (currentTime >= 9 && currentTime < 10) {
     nineAM.style.background = "#fa6c14";
   }
