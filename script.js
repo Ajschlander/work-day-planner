@@ -13,13 +13,84 @@ const threePM = document.getElementById('3pm');
 const fourPM = document.getElementById('4pm');
 const fivePM = document.getElementById('5pm');
 
+const saveNine = document.getElementById('saveNine');
+const saveNineField = () => {
+  let nineAMText = nineAM.value;
+  localStorage.setItem("nine", nineAMText);
+  console.log(localStorage.getItem("nine"));
+}
+saveNine.addEventListener("click", saveNineField);
+
+const saveTen = document.getElementById('saveTen');
+const saveTenField = () => {
+  let tenAMText = tenAM.value;
+  localStorage.setItem("ten", tenAMText);
+  console.log(localStorage.getItem("ten"));
+}
+saveTen.addEventListener("click", saveTenField);
+
+const saveEleven = document.getElementById('saveEleven');
+const saveElevenField = () => {
+  let elevenAMText = elevenAM.value;
+  localStorage.setItem("eleven", elevenAMText);
+  console.log(localStorage.getItem("eleven"));
+}
+saveEleven.addEventListener("click", saveElevenField);
+
+const saveTwelve = document.getElementById('saveTwelve');
+const saveTwelveField = () => {
+  let twelvePMText = twelvePM.value;
+  localStorage.setItem("twelve", twelvePMText);
+}
+saveTwelve.addEventListener("click", saveTwelveField);
+
+const saveOne = document.getElementById('saveOne');
+const saveOneField = () => {
+  let onePMText = onePM.value;
+  localStorage.setItem("one", onePMText);
+  console.log(localStorage.getItem("one"));
+}
+saveOne.addEventListener("click", saveOneField);
+
+const saveTwo = document.getElementById('saveTwo');
+const saveTwoField = () => {
+  let twoPMText = twoPM.value;
+  localStorage.setItem("two", twoPMText);
+  console.log(localStorage.getItem("two"));
+}
+saveTwo.addEventListener("click", saveTwoField);
+
+const saveThree = document.getElementById('saveThree');
+const saveThreeField = () => {
+  let threePMText = threePM.value;
+  localStorage.setItem("three", threePMText);
+  console.log(localStorage.getItem("three"));
+}
+saveThree.addEventListener("click", saveThreeField);
+
+const saveFour = document.getElementById('saveFour');
+const saveFourField = () => {
+  let fourPMText = fourPM.value;
+  localStorage.setItem("four", fourPMText);
+  console.log(localStorage.getItem("four"));
+}
+saveFour.addEventListener("click", saveFourField);
+
+const saveFive = document.getElementById('saveFive');
+const saveFiveField = () => {
+  let fivePMText = fivePM.value;
+  localStorage.setItem("five", fivePMText);
+  console.log(localStorage.getItem("five"));
+}
+saveFive.addEventListener("click", saveFiveField);
+
+
 let toDoList = [];
 
 const initPlanner = () => {
+    updateContent();
     getDateAndTime();
-    addSaveButtons();
     checkTimes();
-    saveToStorage();
 }
 
 // function to display date and time at top of page
@@ -28,21 +99,21 @@ const getDateAndTime = () => {
   dateElement.innerHTML = dateAndTime;
 }
 
-const addSaveButtons = () => {
-  for (var i = 0; i < saveElements.length; i++) {
-    const saveBtn = saveElements[i];
-    saveBtn.addEventListener("click", function(){
-      
-    });
-  }
-}
-
-const saveToStorage = () => {
-
+const updateContent = () => {
+  nineAM.innerHTML = localStorage.getItem("nine");
+  tenAM.innerHTML = localStorage.getItem("ten");
+  elevenAM.innerHTML = localStorage.getItem("eleven");
+  twelvePM.innerHTML = localStorage.getItem("twelve");
+  onePM.innerHTML = localStorage.getItem("one");
+  twoPM.innerHTML = localStorage.getItem("two");
+  threePM.innerHTML = localStorage.getItem("three");
+  fourPM.innerHTML = localStorage.getItem("four");
+  fivePM.innerHTML = localStorage.getItem("five");
 }
 
 const checkTimes = () => {
   let currentTime = moment().hour();
+  currentTime = 11;
   if (currentTime >= 9 && currentTime < 10) {
     nineAM.style.background = "#fa6c14";
   }
