@@ -23,6 +23,10 @@ header::after{
   z-index: -1;
 }
 
+textarea{
+  resize: none;
+}
+
 .title{
   font-size: 48px;
   font-family: 'Noto Serif', serif;
@@ -39,7 +43,7 @@ header::after{
 }
 
 .time{
-  width: 15%;
+  width: 10%;
   text-align: right;
   height: 2.5rem;
   padding: 1rem;
@@ -48,21 +52,25 @@ header::after{
 }
 
 .content{
-  width: 60%;
+  width: 80%;
   text-align: left;
   padding-left: 1rem;
   padding-top: 1rem;
   background: lightgreen;
   border-right: 1px solid lightgrey;
   border-top: 1px solid lightgrey;
+  font-family: 'Sanchez', serif;
+  font-size: 14px;
 }
 
 .save{
-  width: 15%;
+  width: 10%;
   text-align: center;
   padding-top: 1.5rem;
   border-radius: 4px;
   background: #36a6cf;
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
 }
 
 .planner-container{
