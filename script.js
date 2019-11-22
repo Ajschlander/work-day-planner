@@ -13,10 +13,13 @@ const threePM = document.getElementById('3pm');
 const fourPM = document.getElementById('4pm');
 const fivePM = document.getElementById('5pm');
 
+let toDoList = [];
+
 const initPlanner = () => {
     getDateAndTime();
     addSaveButtons();
     checkTimes();
+    saveToStorage();
 }
 
 // function to display date and time at top of page
@@ -29,9 +32,13 @@ const addSaveButtons = () => {
   for (var i = 0; i < saveElements.length; i++) {
     const saveBtn = saveElements[i];
     saveBtn.addEventListener("click", function(){
-      console.log(i);
+      
     });
   }
+}
+
+const saveToStorage = () => {
+
 }
 
 const checkTimes = () => {
